@@ -17,7 +17,7 @@ export default function IngredientsList(props) {
               Generate a recipe from your list of ingredients.
             </p>
           </div>
-          <button className="callout__btn" onClick={props.shown}>
+          <button className="callout__btn" onClick={props.getRecipe}>
             Get a recipe
           </button>
         </div>

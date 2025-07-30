@@ -1,7 +1,8 @@
-export default function ClaudeRecipe(){
-    return(
+export default function ClaudeRecipe(props) {
+  return (
     <section>
-          <h2>Chef Claude Recommends:</h2>
+      {props.recipe}
+      {/* <h2>Chef Claude Recommends:</h2>
           <article className="suggested-recipe-container" aria-live="polite">
             <p>
               Based on the ingredients you have available, I would recommend
@@ -59,6 +60,7 @@ export default function ClaudeRecipe(){
                 Parmesan cheese if desired.
               </li>
             </ol>
-          </article>
-        </section>)
+          </article> */}
+    </section>
+  );
 }
