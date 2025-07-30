@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
-import { getRecipeFromMistral } from "../ai";
+import { getRecipeFromMistral } from "../ai/getRecipeFromMistral";
 
 export default function Body() {
   const [ingredients, setIngredients] = useState([]);

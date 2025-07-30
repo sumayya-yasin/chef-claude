@@ -5,12 +5,24 @@ export default function IngredientsList(props) {
     </li>
   ));
 
+  const enoughIngredients = props.ingredients.length >= 4;
+
   return (
     <section>
       <h2 className="heading">Ingredients on hand:</h2>
       <ul>{ingredientList}</ul>
-      {props.ingredients.length > 3 ? (
-        <div className="callout">
+      {!enoughIngredients && (
+        <div className="callout callout--info">
+          <h3 className="callout__heading">Almost there!</h3>
+          <p className="callout__text">
+            Add at least <strong>4 ingredients</strong> to generate a recipe.
+            You're just <strong>{4 - props.ingredients.length}</strong> away!
+          </p>
+        </div>
+      )}
+
+      {enoughIngredients && (
+        <div className="callout callout--ready">
           <div>
             <h3 className="callout__heading">Ready for a recipe?</h3>
             <p className="callout__text">
@@ -20,12 +32,12 @@ export default function IngredientsList(props) {
           <button
             className="callout__btn"
             onClick={props.getRecipe}
-            disabled={props.loadingState ? true : false}
+            disabled={props.loadingState}
           >
             {props.loadingState ? "Loading..." : "Get a recipe"}
           </button>
         </div>
-      ) : null}
+      )}
     </section>
   );
 }
