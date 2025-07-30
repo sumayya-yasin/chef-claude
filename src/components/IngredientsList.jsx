@@ -1,13 +1,13 @@
 export default function IngredientsList(props) {
   const ingredientList = props.ingredients.map((ingredient) => (
-    <li className="ingredients-section__list__items" key={ingredient}>
+    <li className="list__items" key={ingredient}>
       {ingredient}
     </li>
   ));
 
   return (
     <section>
-      <h2 className="ingredients-section__heading">Ingredients on hand:</h2>
+      <h2 className="heading">Ingredients on hand:</h2>
       <ul>{ingredientList}</ul>
       {props.ingredients.length > 3 ? (
         <div className="callout">
@@ -17,8 +17,12 @@ export default function IngredientsList(props) {
               Generate a recipe from your list of ingredients.
             </p>
           </div>
-          <button className="callout__btn" onClick={props.getRecipe}>
-            Get a recipe
+          <button
+            className="callout__btn"
+            onClick={props.getRecipe}
+            disabled={props.loadingState ? true : false}
+          >
+            {props.loadingState ? "Loading..." : "Get a recipe"}
           </button>
         </div>
       ) : null}

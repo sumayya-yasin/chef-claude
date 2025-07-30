@@ -5,17 +5,29 @@ import { getRecipeFromMistral } from "../ai";
 
 export default function Body() {
   const [ingredients, setIngredients] = useState([]);
-  const [recipe, setRecipe] = useState([]);
+  const [recipe, setRecipe] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [recipeVisible, setRecipeVisible] = useState(false);
 
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
-  function getRecipe() {
-    setRecipe(getRecipeFromMistral(ingredients));
+  async function getRecipe() {
+    setIsLoading(true);
+    const generatedRecipe = await getRecipeFromMistral(ingredients);
+    setRecipe(generatedRecipe);
+    setIsLoading(false);
+    setTimeout(() => {
+      document
+        .getElementById("recipe-section")
+        .scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }, 10);
+    setTimeout(() => {
+      setRecipeVisible(true);
+    }, 150);
   }
-
   return (
     <main className="main">
       <form className="add-ingredient__form" action={addIngredient}>
@@ -29,9 +41,13 @@ export default function Body() {
         <button className="add-ingredient__btn">Add ingredient</button>
       </form>
       {ingredients.length > 0 ? (
-        <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
+        <IngredientsList
+          ingredients={ingredients}
+          getRecipe={getRecipe}
+          loadingState={isLoading}
+        />
       ) : null}
-      {recipe != null ? <ClaudeRecipe recipe={recipe} /> : null}{" "}
+      {recipe && <ClaudeRecipe recipe={recipe} recipeVisible={recipeVisible}/>}
     </main>
   );
 }
