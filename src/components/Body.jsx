@@ -37,6 +37,7 @@ export default function Body() {
           placeholder="e.g. oregano"
           name="ingredient"
           className="add-ingredient__input"
+          required
         />
         <button className="add-ingredient__btn">Add ingredient</button>
       </form>
@@ -47,7 +48,7 @@ export default function Body() {
           loadingState={isLoading}
         />
       ) : null}
-      {recipe && <ClaudeRecipe recipe={recipe} recipeVisible={recipeVisible}/>}
+      {recipe && <ClaudeRecipe recipe={recipe} recipeVisible={recipeVisible} />}
     </main>
   );
 }
