@@ -1,7 +1,6 @@
 import ReactMarkdown from "react-markdown";
 
 export default function ClaudeRecipe(props) {
-  console.log(props.recipe);
   return (
     <section
       id="recipe-section"
