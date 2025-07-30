@@ -156,7 +156,7 @@ h3 {
 
 @media screen and (max-width:680px) {
   .main {
-    padding: 2rem 0.5rem
+    margin: 2rem auto;
   }
 
   .add-ingredient__btn {
@@ -167,6 +167,17 @@ h3 {
   .callout {
     flex-direction: column;
     gap: 2rem;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .main {
+    margin: 2rem auto;
+    width: 100%;
+  }
+  .add-ingredient__btn {
+    width: 100px;
+    padding: 0.2rem;
   }
 }
 
