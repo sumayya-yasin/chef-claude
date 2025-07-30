@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --primary-black: #141413;
+  --border-color: #D1D5DB;
+  --dark-text: #FAFAF8;
+  --light-text: #475467;
+  --secondary-color: #F0EFEB;
+  --accent-color: #D17557;
+  --grey-accent: #6B7280;
+
+}
+
+body {
+  color: var(--primary-black);
+  font-family: inter, sans-serif;
+
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* navigation bar */
+.nav {
+  align-items: center;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.nav__logo {
+  width: 43px;
+}
+
+.nav__text {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 60px;
+  letter-spacing: -2px;
+  padding: 0.5rem;
+}
+
+/* main component */
+
+.main {
+  padding: 3rem;
+}
+
+/* add ingredient section */
+
+.add-ingredient__form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.add-ingredient__input {
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 100px;
+  padding: 9px 13px;
+}
+
+.add-ingredient__btn {
+  background: var(--primary-black);
+  border-radius: 6px;
+  color: white;
+  font-family: inter;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 9px 17px;
+  width: 183px;
+}
+
+.add-ingredient__form>button::before {
+  content: "+";
+  margin-right: 5px;
+}
+
+/* ingredients display section */
+.ingredients-section__heading {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 0;
+  padding-top: 2rem;
+}
+
+.ingredients-section__list__items {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 28px;
+  color: var(--light-text);
+}
+
+/* ingredients section callout */
+.callout {
+  align-items: center;
+  background: var(--secondary-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 2.5rem 3rem 3rem 3rem;
+}
+
+.callout__heading {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+
+.callout__text {
+  color: var(--grey-accent);
+  margin: 0rem;
+}
+
+.callout__btn {
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0px 1px 2px 0px #0000000D;
+  color: var(--dark-text);
+  font-family: inter, 'sans-serif';
+  font-size: .875rem;
+  font-weight: 500;
+  padding: 9px 17px;
+}
+
+@media screen and (max-width:680px) {
+  .callout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+
+}
