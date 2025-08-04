@@ -23,7 +23,7 @@ An interactive recipe generator built with React, where users enter ingredients 
 
 ### ✅ Core Features (from course)
 - State management using `useState`
-- Controlled form components (`input`, `textarea`, `checkbox`, `select`)
+- Controlled form components (`input`)
 - Conditional rendering with ternary and `&&` operators
 - Passing and managing state across components
 - Fetching data from an API
@@ -46,9 +46,8 @@ An interactive recipe generator built with React, where users enter ingredients 
 
 ## 🖼️ Preview
 
-> *Add screenshots or a GIF demo here if available.*
-![Ingredient Count Validation](image-1.png)
-![Loading State preview](image.png)
+![Ingredient Count Validation](preview\Loading_state_preview.PNG)
+![Loading State preview](preview\Loading_state_preview.PNG)
 ---
 
 ## 📂 Folder Structure
@@ -72,6 +71,7 @@ chef-claude/
 │ └── functions/
 │ └── get-recipe.js
 ├── .env
+├── index.html
 ├── package.json
 └── README.md
 ```
