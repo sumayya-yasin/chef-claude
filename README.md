@@ -46,8 +46,9 @@ An interactive recipe generator built with React, where users enter ingredients 
 
 ## 🖼️ Preview
 
-[Ingredient Count Validation](preview/ingredient_validation.png)
-[Loading State preview](preview/loading_state_preview.png)
+- [Ingredient Count Validation](https://github.com/sumayya-yasin/chef-claude/blob/main/preview/ingredient_validation.PNG)
+- [Loading State preview](https://github.com/sumayya-yasin/chef-claude/blob/main/preview/ingredient_validation.PNG)
+
 ---
 
 ## 📂 Folder Structure
