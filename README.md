@@ -33,7 +33,7 @@ An interactive recipe generator built with React, where users enter ingredients 
 - ** Loading State**  
   Spinner and loading message while waiting for the API response.
 
-- **⚠ Ingredient Count Validation**  
+- ** Ingredient Count Validation**  
   The app requires at least **4 ingredients** before enabling recipe generation. Helps ensure meaningful results.
 
 - ** Secure API Integration**  
