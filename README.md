@@ -1,15 +1,15 @@
-# 👨‍🍳 Chef Claude Recipe App
+#  Chef Claude Recipe App
 
 An interactive recipe generator built with React, where users enter ingredients and receive AI-generated recipes. This project was built as part of Section 3 of Scrimba’s Learn React course, with several additional enhancements added to improve the experience.
 
 ---
 
-## 🚀 Live Demo  
+##  Live Demo  
 🔗 [View Live on Netlify](https://chefclaude-ai.netlify.app/)
 
 ---
 
-## 📦 Tech Stack  
+##  Tech Stack  
 - **React (Vite)**
 - **Custom CSS** for styling  
 - **Hugging Face API** for recipe generation  
@@ -19,9 +19,9 @@ An interactive recipe generator built with React, where users enter ingredients 
 
 ---
 
-## 💡 Features
+##  Features
 
-### ✅ Core Features (from course)
+###  Core Features (from course)
 - State management using `useState`
 - Controlled form components (`input`)
 - Conditional rendering with ternary and `&&` operators
@@ -29,29 +29,29 @@ An interactive recipe generator built with React, where users enter ingredients 
 - Fetching data from an API
 - Markdown rendering for rich recipe formatting
 
-### ✨ My Enhancements
-- **🔄 Loading State**  
+###  My Enhancements
+- ** Loading State**  
   Spinner and loading message while waiting for the API response.
 
-- **⚠️ Ingredient Count Validation**  
+- **⚠ Ingredient Count Validation**  
   The app requires at least **4 ingredients** before enabling recipe generation. Helps ensure meaningful results.
 
-- **🔐 Secure API Integration**  
+- ** Secure API Integration**  
   Hugging Face API key is kept **out of frontend code** using a custom **Netlify Function** to handle the API call securely.
 
-- **📜 Scroll to Recipe Section**  
+- ** Scroll to Recipe Section**  
   After clicking "Get Recipe", the view scrolls smoothly to the recipe output.
 
 ---
 
-## 🖼️ Preview
+##  Preview
 
 - [Ingredient Count Validation](https://github.com/sumayya-yasin/chef-claude/blob/main/preview/ingredient_validation.PNG)
 - [Loading State preview](https://github.com/sumayya-yasin/chef-claude/blob/main/preview/Loading_state_preview.PNG)
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 chef-claude/
@@ -79,7 +79,7 @@ chef-claude/
 
 ---
 
-## ⚙️ Getting Started
+##  Getting Started
 
 ### 1. Clone the Repo
 
@@ -108,7 +108,7 @@ npm run dev
 
 ---
 
-## 🔐 Netlify Function (API Proxy)
+##  Netlify Function (API Proxy)
 
 This project uses a **serverless Netlify function** to securely fetch recipes from the Hugging Face API without exposing the API key in frontend code.
 
@@ -117,7 +117,7 @@ This project uses a **serverless Netlify function** to securely fetch recipes fr
 
 ---
 
-## 🤔 Future Improvements
+##  Future Improvements
 
 - Ingredient autocomplete with suggestions  
 - Save favorite recipes using localStorage or Supabase  
@@ -127,7 +127,7 @@ This project uses a **serverless Netlify function** to securely fetch recipes fr
 
 ---
 
-## 📄 License
+##  License
 
 MIT License — free to use, modify, and extend with credit.
 
